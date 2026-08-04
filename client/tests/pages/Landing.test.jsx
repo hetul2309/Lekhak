@@ -42,12 +42,12 @@ describe('Landing Page', () => {
 
   it('renders the landing page', () => {
     renderComponent();
-    expect(screen.getByText('Shabd Setu')).toBeInTheDocument();
+    expect(screen.getByText('Lekhak')).toBeInTheDocument();
   });
 
   it('displays the logo image', () => {
     renderComponent();
-    const logo = screen.getByAltText('Shabd Setu');
+    const logo = screen.getByAltText('Lekhak');
     expect(logo).toBeInTheDocument();
     expect(logo).toHaveAttribute('src');
   });
@@ -79,7 +79,7 @@ describe('Landing Page', () => {
     renderComponent();
     
     // Check gradient background
-    const container = screen.getByText('Shabd Setu').closest('div').parentElement;
+    const container = screen.getByText('Lekhak').closest('div').parentElement;
     expect(container).toHaveClass('min-h-screen');
     expect(container).toHaveClass('bg-gradient-to-br');
   });
@@ -87,7 +87,7 @@ describe('Landing Page', () => {
   it('renders with backdrop blur effect', () => {
     renderComponent();
     
-    const card = screen.getByText('Shabd Setu').closest('div');
+    const card = screen.getByText('Lekhak').closest('div');
     expect(card).toHaveClass('backdrop-blur-sm');
     expect(card).toHaveClass('rounded-2xl');
   });

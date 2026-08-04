@@ -80,7 +80,7 @@ describe("SignIn page", () => {
 
     renderComponent();
 
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "dev@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/enter your password/i), {
@@ -116,7 +116,7 @@ describe("SignIn page", () => {
 
     renderComponent();
 
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "dev@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/enter your password/i), {
@@ -138,7 +138,7 @@ describe("SignIn page", () => {
 
     renderComponent();
 
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "dev@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/enter your password/i), {
@@ -204,7 +204,7 @@ describe("SignIn page", () => {
 
     renderComponent();
 
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "dev@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/enter your password/i), {
@@ -222,7 +222,7 @@ describe("SignIn page", () => {
   it("shows password validation error for short password", async () => {
     renderComponent();
 
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "dev@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/enter your password/i), {
@@ -243,7 +243,7 @@ describe("SignIn page", () => {
 
     renderComponent();
 
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "dev@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/enter your password/i), {
@@ -265,7 +265,7 @@ describe("SignIn page", () => {
 
     renderComponent();
 
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "dev@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/enter your password/i), {
@@ -289,7 +289,7 @@ describe("SignIn page", () => {
 
   it("displays email icon", () => {
     renderComponent();
-    const emailInput = screen.getByPlaceholderText(/name@shabdsetu.com/i);
+    const emailInput = screen.getByPlaceholderText(/name@Lekhak.com/i);
     expect(emailInput.parentElement.querySelector('svg')).toBeInTheDocument();
   });
 
@@ -301,7 +301,7 @@ describe("SignIn page", () => {
 
     renderComponent();
 
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "test@test.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/enter your password/i), {

@@ -49,7 +49,7 @@ describe("SignUp page", () => {
 
     expect(screen.getByPlaceholderText(/tell us what to call you/i)).toBeInTheDocument();
     expect(screen.getByPlaceholderText(/choose a unique handle/i)).toBeInTheDocument();
-    expect(screen.getByPlaceholderText(/name@shabdsetu.com/i)).toBeInTheDocument();
+    expect(screen.getByPlaceholderText(/name@Lekhak.com/i)).toBeInTheDocument();
     expect(screen.getByPlaceholderText(/create a secure password/i)).toBeInTheDocument();
     expect(screen.getByPlaceholderText(/re-enter password/i)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /create account/i })).toBeInTheDocument();
@@ -58,7 +58,7 @@ describe("SignUp page", () => {
   it("renders page title and description", () => {
     renderComponent();
     expect(screen.getByText(/create your profile/i)).toBeInTheDocument();
-    expect(screen.getByText(/join the shabdsetu circle/i)).toBeInTheDocument();
+    expect(screen.getByText(/join the Lekhak circle/i)).toBeInTheDocument();
   });
 
   it("renders google login component", () => {
@@ -130,7 +130,7 @@ describe("SignUp page", () => {
   it("accepts valid email format", () => {
     renderComponent();
 
-    const emailInput = screen.getByPlaceholderText(/name@shabdsetu.com/i);
+    const emailInput = screen.getByPlaceholderText(/name@Lekhak.com/i);
     fireEvent.change(emailInput, { target: { value: "test@example.com" } });
 
     expect(emailInput.value).toBe("test@example.com");
@@ -142,7 +142,7 @@ describe("SignUp page", () => {
     fireEvent.change(screen.getByPlaceholderText(/tell us what to call you/i), {
       target: { value: "Test User" },
     });
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "user@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/create a secure password/i), {
@@ -195,7 +195,7 @@ describe("SignUp page", () => {
   it("handles email input change", () => {
     renderComponent();
 
-    const emailInput = screen.getByPlaceholderText(/name@shabdsetu.com/i);
+    const emailInput = screen.getByPlaceholderText(/name@Lekhak.com/i);
     fireEvent.change(emailInput, {
       target: { value: "test@example.com" },
     });
@@ -234,7 +234,7 @@ describe("SignUp page", () => {
 
   it("renders email icon", () => {
     renderComponent();
-    const emailInput = screen.getByPlaceholderText(/name@shabdsetu.com/i);
+    const emailInput = screen.getByPlaceholderText(/name@Lekhak.com/i);
     const container = emailInput.closest("div")?.parentElement;
     expect(container).toBeInTheDocument();
   });
@@ -282,7 +282,7 @@ describe("SignUp page", () => {
     
     expect(screen.getByPlaceholderText(/tell us what to call you/i)).toBeInTheDocument();
     expect(screen.getByPlaceholderText(/choose a unique handle/i)).toBeInTheDocument();
-    expect(screen.getByPlaceholderText(/name@shabdsetu.com/i)).toBeInTheDocument();
+    expect(screen.getByPlaceholderText(/name@Lekhak.com/i)).toBeInTheDocument();
     expect(screen.getByPlaceholderText(/create a secure password/i)).toBeInTheDocument();
     expect(screen.getByPlaceholderText(/re-enter password/i)).toBeInTheDocument();
   });
@@ -312,7 +312,7 @@ describe("SignUp page", () => {
     fireEvent.change(screen.getByPlaceholderText(/choose a unique handle/i), {
       target: { value: "testuser" },
     });
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "test@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/create a secure password/i), {
@@ -348,7 +348,7 @@ describe("SignUp page", () => {
     fireEvent.change(screen.getByPlaceholderText(/choose a unique handle/i), {
       target: { value: "testuser" },
     });
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "test@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/create a secure password/i), {
@@ -455,7 +455,7 @@ describe("SignUp page", () => {
     fireEvent.change(screen.getByPlaceholderText(/choose a unique handle/i), {
       target: { value: "johndoe" },
     });
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "john@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/create a secure password/i), {
@@ -467,7 +467,7 @@ describe("SignUp page", () => {
 
     expect(screen.getByPlaceholderText(/tell us what to call you/i).value).toBe("John Doe");
     expect(screen.getByPlaceholderText(/choose a unique handle/i).value).toBe("johndoe");
-    expect(screen.getByPlaceholderText(/name@shabdsetu.com/i).value).toBe("john@example.com");
+    expect(screen.getByPlaceholderText(/name@Lekhak.com/i).value).toBe("john@example.com");
   });
 
   it("handles OTP input changes", async () => {
@@ -489,7 +489,7 @@ describe("SignUp page", () => {
     fireEvent.change(screen.getByPlaceholderText(/choose a unique handle/i), {
       target: { value: "testuser" },
     });
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "test@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/create a secure password/i), {
@@ -527,7 +527,7 @@ describe("SignUp page", () => {
     fireEvent.change(screen.getByPlaceholderText(/choose a unique handle/i), {
       target: { value: "testuser" },
     });
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "test@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/create a secure password/i), {
@@ -563,7 +563,7 @@ describe("SignUp page", () => {
     fireEvent.change(screen.getByPlaceholderText(/choose a unique handle/i), {
       target: { value: "testuser" },
     });
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "test@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/create a secure password/i), {
@@ -604,7 +604,7 @@ describe("SignUp page", () => {
     fireEvent.change(screen.getByPlaceholderText(/choose a unique handle/i), {
       target: { value: "testuser" },
     });
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "test@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/create a secure password/i), {
@@ -642,7 +642,7 @@ describe("SignUp page", () => {
     fireEvent.change(screen.getByPlaceholderText(/choose a unique handle/i), {
       target: { value: "testuser" },
     });
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "test@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/create a secure password/i), {
@@ -712,7 +712,7 @@ describe("SignUp page", () => {
     fireEvent.change(screen.getByPlaceholderText(/choose a unique handle/i), {
       target: { value: "testuser" },
     });
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "test@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/create a secure password/i), {
@@ -760,7 +760,7 @@ describe("SignUp page", () => {
     fireEvent.change(screen.getByPlaceholderText(/choose a unique handle/i), {
       target: { value: "testuser" },
     });
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "test@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/create a secure password/i), {
@@ -800,7 +800,7 @@ describe("SignUp page", () => {
     fireEvent.change(screen.getByPlaceholderText(/choose a unique handle/i), {
       target: { value: "testuser" },
     });
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "test@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/create a secure password/i), {
@@ -851,7 +851,7 @@ describe("SignUp page", () => {
     fireEvent.change(screen.getByPlaceholderText(/tell us what to call you/i), {
       target: { value: "Test User" },
     });
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "test@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/create a secure password/i), {
@@ -877,7 +877,7 @@ describe("SignUp page", () => {
     fireEvent.change(screen.getByPlaceholderText(/tell us what to call you/i), {
       target: { value: "Test User" },
     });
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "test@example.com" },
     });
     fireEvent.change(screen.getByPlaceholderText(/create a secure password/i), {
@@ -909,7 +909,7 @@ describe("SignUp page", () => {
     fireEvent.change(screen.getByPlaceholderText(/choose a unique handle/i), {
       target: { value: "testuser" },
     });
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "Test@Example.COM" },
     });
     fireEvent.change(screen.getByPlaceholderText(/create a secure password/i), {
@@ -950,7 +950,7 @@ describe("SignUp page", () => {
     fireEvent.change(screen.getByPlaceholderText(/choose a unique handle/i), {
       target: { value: "testuser" },
     });
-    fireEvent.change(screen.getByPlaceholderText(/name@shabdsetu.com/i), {
+    fireEvent.change(screen.getByPlaceholderText(/name@Lekhak.com/i), {
       target: { value: "  test@example.com  " },
     });
     fireEvent.change(screen.getByPlaceholderText(/create a secure password/i), {
