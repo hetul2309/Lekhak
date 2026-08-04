@@ -23,11 +23,6 @@
 * **Multi-Tag Support**: Each blog post can be tagged under multiple categories simultaneously.
 * **Pre-Seeded Dataset**: Includes automated MongoDB seed script populating 25 Indian & Gujarati creators, 65+ rich articles, and 200+ comments.
 
-### 🛡️ Admin Management & Safety
-* **Admin Portal**: Integrated dashboard for managing categories (`/categories`), user roles & ban status (`/users`), and content reports (`/reports`).
-* **Direct Admin Auth**: Automated admin provisioning and login via `.env` credentials (`EMAIL_USER` & `ADMIN_PASS`).
-* **User Reporting System**: Flag inappropriate posts with specific report reasons for admin moderation.
-
 ### 🔐 Security & Auth
 * **JWT & HttpOnly Cookies**: Secure token storage with XSS/CSRF mitigation.
 * **Google OAuth2**: One-click Google sign-in.
@@ -84,20 +79,16 @@ Lekhak/
 ```env
 PORT=3000
 NODE_ENV=development
-MONGODB_CONN=mongodb+srv://<username>:<password>@cluster.mongodb.net/Lekhak?retryWrites=true&w=majority
+MONGODB_CONN=your_mongodb_connection_string
 JWT_SECRET=your_super_secret_jwt_key
 GEMINI_API_KEY=your_gemini_api_key
 GEMINI_MODEL=gemini-2.5-flash
-EMAIL_USER=bloglekhak2629@gmail.com
-ADMIN_PASS=lekhak_hk@26
 FRONTEND_URL=http://localhost:5173
 ```
 
 **Frontend Config (`client/.env`)**:
 ```env
 VITE_API_BASE_URL=http://localhost:3000/api
-VITE_EMAIL_USER=bloglekhak2629@gmail.com
-ADMIN_PASS=lekhak_hk@26
 ```
 
 ---
@@ -130,16 +121,6 @@ To populate your MongoDB database with 25 Indian/Gujarati creators, 14 categorie
 cd api
 node scripts/seed.js
 ```
-
----
-
-## 🔑 Admin Portal Access
-
-Log in on the Sign In page using your `.env` Admin credentials:
-* **Email**: `bloglekhak2629@gmail.com`
-* **Password**: `lekhak_hk@26`
-
-Once authenticated, your account will be automatically granted the **Admin** role, unlocking **Manage Categories** (`/categories`), **Manage Users** (`/users`), and **Reports** (`/reports`) in the navigation sidebar!
 
 ---
 
