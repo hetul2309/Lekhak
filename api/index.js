@@ -58,11 +58,11 @@ initNotificationIO(io);
 
 io.on('connection', (socket) => {
 
-    socket.on('auth:identify', (userId) => {
-        if (userId) {
-            socket.join(String(userId));
-        }
-    });
+  socket.on('auth:identify', (userId) => {
+    if (userId) {
+      socket.join(String(userId));
+    }
+  });
 });
 
 app.use(cookieParser());
@@ -112,10 +112,10 @@ app.use('/api/auth/login', loginLimiter)
 app.use('/api/auth', AuthRoute)
 app.use('/api/user', UserRoute)
 app.use('/api/category', CategoryRoute)
-app.use('/api/blog',BlogRoute)
-app.use('/api/blog',BlogAIRoute)
-app.use('/api/comment',CommentRoute)
-app.use('/api/bloglike',BlogLikeRoute)
+app.use('/api/blog', BlogRoute)
+app.use('/api/blog', BlogAIRoute)
+app.use('/api/comment', CommentRoute)
+app.use('/api/bloglike', BlogLikeRoute)
 app.use('/api/view', ViewRoute)
 app.use('/api/follow', FollowRoute)
 app.use('/api/save', SaveRoute)
@@ -125,9 +125,9 @@ app.use('/api/report', ReportsRoute)
 app.use('/api/analytics', AnalyticsRoute)
 
 
-mongoose.connect(process.env.MONGODB_CONN, { dbName: 'Lekhak'})
-    .then(()=>console.log('Database connected to Lekhak successfully.'))
-    .catch(err=>console.log('Database connection failed.',err))
+mongoose.connect(process.env.MONGODB_CONN, { dbName: 'Lekhak' })
+  .then(() => console.log('Database connected to Lekhak successfully.'))
+  .catch(err => console.log('Database connection failed.', err))
 
 server.listen(PORT, '0.0.0.0', () => {
   console.log(`Server is running on port ${PORT}`);
@@ -139,11 +139,11 @@ server.listen(PORT, '0.0.0.0', () => {
 });
 
 app.use((err, req, res, next) => {
-    const statusCode = err.statusCode || 500
-    const message = err.message || 'Internal server error.'
-    res.status(statusCode).json({
-        success: false,
-        statusCode,
-        message
-    })
+  const statusCode = err.statusCode || 500
+  const message = err.message || 'Internal server error.'
+  res.status(statusCode).json({
+    success: false,
+    statusCode,
+    message
+  })
 })
