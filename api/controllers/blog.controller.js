@@ -21,7 +21,18 @@ const normalizeSlug = (value = '') => {
 }
 
 const stripHtml = (value = '') => value.replaceAll(/<[^>]*>/g, '').trim()
-const toPlainText = (value = '') => decode(value)
+const toPlainText = (value = '') => {
+    if (!value || typeof value !== 'string') return ''
+    return decode(value)
+        .replace(/<!--[\s\S]*?-->/g, '')
+        .replace(/<\/(p|div|h[1-6]|li|blockquote|pre|tr|section|article)>/gi, '\n')
+        .replace(/<br\s*\/?>/gi, '\n')
+        .replace(/<[^>]+>/g, '')
+        .split('\n')
+        .map(line => line.trim())
+        .filter(Boolean)
+        .join('\n')
+}
 
 const parseRequestBody = (raw) => {
     if (!raw) {

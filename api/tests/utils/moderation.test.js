@@ -85,5 +85,13 @@ describe('Moderation Utils', () => {
       
       expect(result.safe).toBe(false)
     })
+
+    it('should not flag technical programming terms like execute or cp', async () => {
+      const techContent = 'Make sure your code is ready to execute from beginning to end.\nRun cp command to copy files.'
+      const result = await analyzeContentWithKeywords(techContent)
+
+      expect(result.safe).toBe(true)
+      expect(result.badLines).toHaveLength(0)
+    })
   })
 })

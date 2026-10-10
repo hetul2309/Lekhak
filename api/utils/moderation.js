@@ -18,12 +18,12 @@ const CATEGORY_SUGGESTIONS = {
 const SEVERITY_KEYWORDS = {
   violence_threats: [
     'kill', 'murder', 'stab', 'shoot', 'bomb', 'explode', 'torture',
-    'execute', 'behead', 'burn alive', 'massacre', 'assassinate',
+    'behead', 'burn alive', 'massacre', 'assassinate',
     'suicide attack', 'genocide'
   ],
 
   child_abuse: [
-    'child pornography', 'cp', 'pedo', 'pedophile', 'molest',
+    'child pornography', 'pedo', 'pedophile', 'molest',
     'rape child', 'abuse child', 'exploit minor', 'underage sex'
   ],
 
